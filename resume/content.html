@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>{{ .Contact.FirstName }} {{ .Contact.LastName }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./resume/css">
+</head>
+<body>
+<main>
+
+<section id="contact">
+  <div class="heading">
+    <div class="name">{{ .Contact.FirstName }} {{ .Contact.LastName }}</div>
+    <div class="title">{{ .Contact.Title }}</div>
+  </div>
+  <div class="content">
+    <div>{{ .Contact.Address.Line1 }}</div>
+    <div>{{ .Contact.Address.City }}, {{ .Contact.Address.State }} {{ .Contact.Address.ZipCode }}<div>
+    <div>{{ .Contact.Phone }}<div>
+    <div class="email"><a href="mailto:{{ .Contact.Email }}">{{ .Contact.Email }}</a><div>
+  </div>
+</section>
+
+<section id="work-experience">
+  <div class="heading">
+    <div class="name">Work Experience</div>
+  </div>
+  <div class="content">
+{{ range $index, $employment := .Employments }}
+    <div class="employer">
+      <div class="name">{{ $employment.Name }}</div>
+      <div class="title">{{ $employment.Title }}</div>
+      <div class="dates">{{ $employment.Years }}, {{ $employment.City }}, {{ $employment.State }}</div>
+      <div class="keywords">{{ range $index, $keyword := $employment.Keywords }}{{ if $index }}, {{ end }}{{ $keyword }}{{ end }}</div>
+      <div class="experience">
+        <ul>
+{{   range $index, $item := $employment.Experience }}
+            <li>{{ $item }}</li>
+{{   end }}
+        </ul>
+      </div>
+    </div>
+{{ end }}
+  </div>
+</section>
+
+<section id="skills">
+  <div class="heading">
+    <div class="name">Skills</div>
+  </div>
+  <div class="content">
+    <div>{{ range $index, $skill := .Skills }}{{ if $index }}, {{ end }}{{ $skill }}{{ end }}</div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="heading">
+    <div class="name">Education</div>
+  </div>
+  <div class="content">
+    <div class="degree">{{ .Education.Degree }} {{ .Education.Major }}, {{ .Education.Institution }}</div>
+    <div class="dates">{{ .Education.Years }} {{ .Education.Status }}</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

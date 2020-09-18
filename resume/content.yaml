@@ -1,0 +1,121 @@
+contact:
+  first_name: Jason
+  last_name:  Hord
+  title:      Linux Administrator
+  email:      jason.hord@gmail.com
+  phone:      325-234-2010
+  address:
+    line1:   2740 N Madison Apt 1
+    line2:
+    city:    Denver
+    state:   CO
+    zipcode: 80205
+
+employments:
+
+- name:  FluentStream
+  title: Engineer II
+  years: 2017 - present
+  city:  Denver
+  state: CO
+  keywords:
+  - Go
+  - C
+  - Git
+  - Docker
+  - Kubernetes
+  - Linux
+  - DevOps
+  experience:
+  - Automated platform build pipeline utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running customized Asterisk installations with support tooling for maintenance and diagnostics.
+  - Refactored internal Caller ID Name (CNAM) service from PHP to Go reducing API server load by 50% and eliminating service timeouts.
+  - Developed micro-services for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
+  - Debugged and refactored Go and NodeJS projects for a busy event pipeline to reduce CPU load, memory consumption, and on-the-wire JSON eliminating service bottlenecks and down time.
+  - Utilized SaltStack to automate deployment and maintenance tasks on a fleet of over 150 servers running Debian/Ubuntu/CentOS Linux in cloud providers including Vultr, DigitalOcean, Google, and AWS.
+  - Provided day-to-day support to operations and business leadership in the form of reporting, tools, and technical documentation to help everyone on the team maintain positive, pro-active service for our clients.
+
+- name:  Angelo State University
+  title: Portal Integration Analyst
+  years: 2003 - 2015
+  city:  San Angelo
+  state: TX
+  keywords:
+  - Perl
+  - Linux
+  - Banner
+  - Luminis
+  - Active Directory
+  - Oracle
+  - Enterprise
+  experience:
+  - Programmed fully automated identity management system maintaining real-time account status for an active campus of over 6,000 students.
+  - Developed and deployed authenticated, secure web-services performing real-time updates via LDAP/S, SQL, or platform APIs.
+  - Designed and built customer service support tools to assist with identity and access issues such as lost or expired passwords and password resets.
+  - Refactored Ellucian Banner Pro*C and PL/SQL programs for regulatory compliance and additional features as requested by functional staff to meet organizational goals.
+  - Implemented single-sign-on to campus resources and federated services through Shibboleth, CAS, and custom built connectors in Perl allowing access to campus web resources through Ellucian Luminis.
+  - Provided expertise and PHP programming to facilitate the implementation of the LiveWhale CMS for the Angelo State University web site.
+  - Collaborated with team members to implement version control (SVN, Mercurial) for tracking and documenting modifications to Ellucian Banner, Luminis, and in-house applications.
+  - Created ETL workflow using Informatica Cloud and Salesforce.com enabling university retention and recruitment efforts.
+  - Administered Windows Server 2008 R2 domain including DNS, Certificates, GPOs, and IIS.
+  - Served as lead for technical projects including the migration of student email services to Gmail, implementation of on-campus Blackboard LMS services, and general infrastructure architecture and planning.
+  - Provided primary support and administration for campus Ellucian Luminis portal services.
+  - Coordinated and performed routine maintenance and administrative activities according to industry best practices.
+  - Managed regular student laboratory refresh cycles involving budgeting, procurement, and coordinating physical hardware replacement and disposal.
+  - Documented and implemented departmental student technician employment policies.
+
+- name:  Self-Employed
+  title: Owner
+  years: 1998 - 2015
+  city:  San Angelo
+  state: TX
+  keywords:
+  - C
+  - Perl
+  - PHP
+  experience:
+  - Wrote analysis and reporting software related to gas sample analysis for MTI, EZChrom, and Diablo BTU processing supporting multiple export formats including CSV, XML, Excel, and others as required by the reporting needs of the client.
+  - Maintained a gas chromatography laboratory operating Agilent micro gas chromatographs analyzing natural gas samples for clients under the direction of JIS Measurement, Inc.
+  - Built daily Excel-to-MySQL data migrator to enable USDA beef reporting for San Angelo Pack as contracted through WacTech, Inc.
+  - Developed a win32 platform utility to calculate orifice factors for gas pipeline measurement in the field.
+  - Programmed tooling for Charts, Inc. to convert chart integration data from an existing proprietary solution to formats suitable for newer processing software.
+
+- name:  SITEL Corporation
+  title: IT Technician / Operator
+  years: 1996 - 1998, 2000 - 2003
+  city:  San Angelo
+  state: TX
+  keywords:
+  - C
+  - Perl
+  - PHP
+  experience:
+  - Replaced or re-imaged desktop machines per project specifications or as needed.
+  - Troubleshot daily application, network, and hardware issues in a busy call center with 1,000+ machines.
+  - Wrote template-based configuration and automation tools to assist with configuration and deployment.
+  - Built monitoring and infrastructure support tools under Windows and Linux.
+  - Automated tasks using Awk, C, Perl, and REXX.
+  - Ran nightly reporting, day-end processing, and backups on AIX and SCO Unix systems.
+
+skills:
+- Go
+- C
+- Perl
+- JavaScript/NodeJS
+- bash/sh
+- Git
+- Linux (Arch, Debian, Ubuntu, RedHat, CentOS)
+- Docker
+- Kubernetes
+- GitHub/GitLab
+- Oracle
+- MySQL
+- MongoDB
+- LDAP
+
+education:
+  institution: Angelo State University
+  degree:      B.S.
+  major:       Computer Science
+  minor:       Math / Physics
+  years:       1994-1999
+  status:      Cum Laude
