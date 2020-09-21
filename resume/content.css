@@ -42,17 +42,25 @@ section > .content {
   font-size: 1.25em;
 }
 
-#contact .content .email a {
+#contact .content a {
   color:           {{ .Palette.Hilite }};
   text-decoration: none;
 }
 
-#contact .content .email a:hover {
+#contact .content a:hover {
   color: {{ .Palette.Hilite }};
 }
 
-#contact .content .email a:visited {
+#contact .content a:visited {
   color: {{ .Palette.Hilite }};
+}
+
+#contact .content .links {
+  margin-top: 1em;
+}
+
+#contact .content .link a {
+  margin-left: 1em;
 }
 
 #work-experience .content .employer {

@@ -17,9 +17,15 @@
   </div>
   <div class="content">
     <div>{{ .Contact.Address.Line1 }}</div>
-    <div>{{ .Contact.Address.City }}, {{ .Contact.Address.State }} {{ .Contact.Address.ZipCode }}<div>
-    <div>{{ .Contact.Phone }}<div>
-    <div class="email"><a href="mailto:{{ .Contact.Email }}">{{ .Contact.Email }}</a><div>
+    <div>{{ .Contact.Address.City }}, {{ .Contact.Address.State }} {{ .Contact.Address.ZipCode }}</div>
+    <div>{{ .Contact.Phone }}</div>
+    <div class="email"><a href="mailto:{{ .Contact.Email }}">{{ .Contact.Email }}</a></div>
+    <div class="links">
+      <div>Projects and Source Code:</div>
+{{ range $index, $link := .Contact.Links }}
+      <div class="link"><a href="{{ $link.Href }}">{{ $link.Name }}</a></div>
+{{ end }}
+    </div>
   </div>
 </section>
 

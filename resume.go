@@ -18,6 +18,10 @@ type Resume struct {
     Title     string   `json:"title"      yaml:"title"`
     Email     string   `json:"email"      yaml:"email"`
     Phone     string   `json:"phone"      yaml:"phone"`
+    Links     []struct {
+      Name string `json:"name" yaml:"name"`
+      Href string `json:"href" yaml:"href"`
+    } `json:"links" yaml:"links"`
     Address struct {
       Line1     string `json:"line1"   yaml:"line1"`
       Line2     string `json:"line2"   yaml:"line2"`

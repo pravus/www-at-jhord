@@ -10,12 +10,17 @@ contact:
     city:    Denver
     state:   CO
     zipcode: 80205
+  links:
+  - name: GitHub Repositories
+    href: https://github.com/pravus
+  - name: GitLab Repositories
+    href: https://gitlab.com/jhord
 
 employments:
 
 - name:  FluentStream
   title: Engineer II
-  years: 2017 - present
+  years: 2017 - 2020
   city:  Denver
   state: CO
   keywords:
