@@ -35,7 +35,7 @@ employments:
   - Automated platform build pipeline utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running customized Asterisk installations with support tooling for maintenance and diagnostics.
   - Refactored internal Caller ID Name (CNAM) service from PHP to Go reducing API server load by 50% and eliminating service timeouts.
   - Developed micro-services for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
-  - Debugged and refactored Go and NodeJS projects for a busy event pipeline to reduce CPU load, memory consumption, and on-the-wire JSON eliminating service bottlenecks and down time.
+  - Debugged and refactored Go and NodeJS projects for a busy event pipeline to reduce CPU load, memory consumption, and on-the-wire JSON eliminating service bottlenecks and downtime.
   - Utilized SaltStack to automate deployment and maintenance tasks on a fleet of over 150 servers running Debian/Ubuntu/CentOS Linux in cloud providers including Vultr, DigitalOcean, Google, and AWS.
   - Provided day-to-day support to operations and business leadership in the form of reporting, tools, and technical documentation to help everyone on the team maintain positive, pro-active service for our clients.
 
