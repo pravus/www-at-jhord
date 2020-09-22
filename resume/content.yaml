@@ -1,7 +1,7 @@
 contact:
   first_name: Jason
   last_name:  Hord
-  title:      Linux Administrator
+  title:      Linux Administrator / Programmer
   email:      jason.hord@gmail.com
   phone:      325-234-2010
   address:
@@ -29,14 +29,17 @@ employments:
   - Git
   - Docker
   - Kubernetes
+  - MongoDB
   - Linux
   - DevOps
   experience:
   - Automated platform build pipeline utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running customized Asterisk installations with support tooling for maintenance and diagnostics.
+  - Migrated multiple distributed MySQL/Tungsten database clusters to Amazon RDS to provide higher resilience and eliminate maintenance workloads.
   - Refactored internal Caller ID Name (CNAM) service from PHP to Go reducing API server load by 50% and eliminating service timeouts.
-  - Developed micro-services for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
+  - Developed Go microservices for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
   - Debugged and refactored Go and NodeJS projects for a busy event pipeline to reduce CPU load, memory consumption, and on-the-wire JSON eliminating service bottlenecks and downtime.
-  - Utilized SaltStack to automate deployment and maintenance tasks on a fleet of over 150 servers running Debian/Ubuntu/CentOS Linux in cloud providers including Vultr, DigitalOcean, Google, and AWS.
+  - Updated call interfaces and logic to both MySQL and MongoDB databases for our platform API to support migrating from PHP 5.5 to 5.7 with zero downtime.
+  - Utilized SaltStack to automate deployment and maintenance tasks on a fleet of over 150 servers running Debian, Ubuntu, and CentOS Linux in cloud providers including Vultr, DigitalOcean, Google, and AWS.
   - Provided day-to-day support to operations and business leadership in the form of reporting, tools, and technical documentation to help everyone on the team maintain positive, pro-active service for our clients.
 
 - name:  Angelo State University

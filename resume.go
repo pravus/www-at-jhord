@@ -5,7 +5,7 @@ import (
   "log"
   "net/http"
   "os"
-  "text/template"
+  "html/template"
 
   "github.com/go-chi/chi"
   "gopkg.in/yaml.v2"
