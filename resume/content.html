@@ -2,27 +2,27 @@
 
 <html>
 <head>
-  <title>{{ .Contact.FirstName }} {{ .Contact.LastName }}</title>
+  <title>{{ .Resume.Contact.FirstName }} {{ .Resume.Contact.LastName }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./resume/css">
+  <link rel="stylesheet" href="{{ .Stylesheet }}">
 </head>
 <body>
 <main>
 
 <section id="contact">
   <div class="heading">
-    <div class="name">{{ .Contact.FirstName }} {{ .Contact.LastName }}</div>
-    <div class="title">{{ .Contact.Title }}</div>
+    <div class="name">{{ .Resume.Contact.FirstName }} {{ .Resume.Contact.LastName }}</div>
+    <div class="title">{{ .Resume.Contact.Title }}</div>
   </div>
   <div class="content">
-    <div>{{ .Contact.Address.Line1 }}</div>
-    <div>{{ .Contact.Address.City }}, {{ .Contact.Address.State }} {{ .Contact.Address.ZipCode }}</div>
-    <div>{{ .Contact.Phone }}</div>
-    <div class="email"><a href="mailto:{{ .Contact.Email }}">{{ .Contact.Email }}</a></div>
+    <div>{{ .Resume.Contact.Address.Line1 }}</div>
+    <div>{{ .Resume.Contact.Address.City }}, {{ .Resume.Contact.Address.State }} {{ .Resume.Contact.Address.ZipCode }}</div>
+    <div>{{ .Resume.Contact.Phone }}</div>
+    <div class="email"><a href="mailto:{{ .Resume.Contact.Email }}">{{ .Resume.Contact.Email }}</a></div>
     <div class="links">
       <div>Projects and Source Code:</div>
-{{ range $index, $link := .Contact.Links }}
+{{ range $index, $link := .Resume.Contact.Links }}
       <div class="link"><a href="{{ $link.Href }}">{{ $link.Name }}</a></div>
 {{ end }}
     </div>
@@ -34,7 +34,7 @@
     <div class="name">Work Experience</div>
   </div>
   <div class="content">
-{{ range $index, $employment := .Employments }}
+{{ range $index, $employment := .Resume.Employments }}
     <div class="employer">
       <div class="name">{{ $employment.Name }}</div>
       <div class="title">{{ $employment.Title }}</div>
@@ -57,7 +57,7 @@
     <div class="name">Skills</div>
   </div>
   <div class="content">
-    <div>{{ range $index, $skill := .Skills }}{{ if $index }}, {{ end }}{{ $skill }}{{ end }}</div>
+    <div>{{ range $index, $skill := .Resume.Skills }}{{ if $index }}, {{ end }}{{ $skill }}{{ end }}</div>
   </div>
 </section>
 
@@ -66,8 +66,8 @@
     <div class="name">Education</div>
   </div>
   <div class="content">
-    <div class="degree">{{ .Education.Degree }} {{ .Education.Major }}, {{ .Education.Institution }}</div>
-    <div class="dates">{{ .Education.Years }} {{ .Education.Status }}</div>
+    <div class="degree">{{ .Resume.Education.Degree }} {{ .Resume.Education.Major }}, {{ .Resume.Education.Institution }}</div>
+    <div class="dates">{{ .Resume.Education.Years }} {{ .Resume.Education.Status }}</div>
   </div>
 </section>
 

@@ -68,11 +68,21 @@ func ResumeRouter() func (chi.Router) {
 }
 
 func ResumeHTML() http.HandlerFunc {
-  resume  := ResumeLoadFromYaml("resume/content.yaml")
   content := template.Must(template.ParseFiles("resume/content.html"))
+  resume  := ResumeLoadFromYaml("resume/content.yaml")
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     w.Header().Add("Content-Type", "text/html")
-    err := content.Execute(w, resume)
+    path := "./resume/css"
+    if r.URL.Path[len(r.URL.Path) - 1:] == "/" {
+      path = "./css"
+    }
+    err := content.Execute(w, struct{
+      Resume     *Resume
+      Stylesheet string
+    }{
+      resume,
+      path,
+    })
     if err != nil {
       log.Printf("template: error=%v", err)
       return
