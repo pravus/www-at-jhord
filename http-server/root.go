@@ -20,12 +20,20 @@ func RootRouter() func (chi.Router) {
   }
 }
 
+type RootVars struct {
+  Prefix string
+}
+
 func Home() http.HandlerFunc {
   content := template.Must(template.ParseFiles("root/content.html"))
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     logVisit(r)
     w.Header().Add("Content-Type", "text/html")
-    err := content.Execute(w, nil)
+    prefix := "@jhord/"
+    if r.URL.Path[len(r.URL.Path) - 1:] == "/" {
+      prefix = ""
+    }
+    err := content.Execute(w, &RootVars{Prefix: prefix})
     if err != nil {
       log.Printf("template: error=%v", err)
     }
