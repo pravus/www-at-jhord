@@ -19,6 +19,6 @@ jobs:
         TAG=$(echo $GITHUB_REF | cut -d '/' -f 3)
         docker login ${REGISTRY} --username ${{ secrets.DO_TOKEN }} --password ${{ secrets.DO_TOKEN }}
         docker build -f Dockerfile.http -t ${REGISTRY}/${PREFIX}-http:${TAG} .
-        docker push ${REGISTRY}/${PREFIX}:-http${TAG}
+        docker push ${REGISTRY}/${PREFIX}-http:${TAG}
         docker build -f Dockerfile.grpc -t ${REGISTRY}/${PREFIX}-grpc:${TAG} .
         docker push ${REGISTRY}/${PREFIX}-grpc:${TAG}
