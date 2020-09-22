@@ -29,9 +29,10 @@ func Home() http.HandlerFunc {
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     logVisit(r)
     w.Header().Add("Content-Type", "text/html")
-    prefix := "@jhord/"
-    if r.URL.Path[len(r.URL.Path) - 1:] == "/" {
-      prefix = ""
+    log.Printf("debug path=%s", r.URL.Path)
+    prefix := ""
+    if r.URL.Path == "/" {
+      prefix = "@jhord/"
     }
     err := content.Execute(w, &RootVars{Prefix: prefix})
     if err != nil {
