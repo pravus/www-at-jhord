@@ -1,0 +1,27 @@
+syntax = "proto2";
+option go_package = ".;registry";
+
+message GetMaxVisitsRequest {}
+message GetMaxVisitsResponse {
+  required uint64 max = 1;
+}
+
+message Visit {
+  required string address = 1;
+  required string agent   = 2;
+  required int64  ts      = 3;
+}
+
+message LogVisitResponse {
+  required uint64 count = 1;
+}
+
+message GetVisitsRequest {
+  required string address = 1;
+}
+
+service Registry {
+  rpc GetMaxVisits(GetMaxVisitsRequest) returns (GetMaxVisitsResponse);
+  rpc LogVisit(Visit) returns (LogVisitResponse);
+  rpc GetVisits(GetVisitsRequest) returns (stream Visit);
+}

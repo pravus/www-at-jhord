@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>@jhord</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  </style>
+</head>
+<body>
+<main>
+
+<h1>Hello, {{ .Address }}!</h1>
+{{ if .Visits }}
+<h2>You've been here {{ .Count }} time{{ if ne .Count 1 }}s{{ end }}.</h2>
+<table>
+  <tr>
+    <th colspan="2">Last {{ .Max }} visits.</th>
+  </tr>
+  <tr>
+    <th>Date</th>
+    <th>User Agent</th>
+  </tr>
+{{   range $index, $visit := .Visits }}
+  <tr>
+    <td>{{ $visit.Date }}</td>
+    <td>{{ $visit.Agent }}</td>
+  </tr>
+{{   end }}
+</table>
+{{ else }}
+<p>Unfortunately I am currently unable to retrieve your visitation history but please do come again some time.</p>
+{{ end }}
+
+</main>
+</body>
+</html>

@@ -1,11 +1,11 @@
 package main
 
 import (
+  "html/template"
   "io/ioutil"
   "log"
   "net/http"
   "os"
-  "html/template"
 
   "github.com/go-chi/chi"
   "gopkg.in/yaml.v2"

@@ -14,9 +14,11 @@ jobs:
     - name: main
       env:
         REGISTRY: registry.digitalocean.com
-        IMAGE:    registry-carbon-cc/www-at-jhord
+        PREFIX:   registry-carbon-cc/www-at-jhord
       run: |
         TAG=$(echo $GITHUB_REF | cut -d '/' -f 3)
         docker login ${REGISTRY} --username ${{ secrets.DO_TOKEN }} --password ${{ secrets.DO_TOKEN }}
-        docker build -t ${REGISTRY}/${IMAGE}:${TAG} .
-        docker push ${REGISTRY}/${IMAGE}:${TAG}
+        docker build -f Dockerfile.http -t ${REGISTRY}/${PREFIX}-http:${TAG} .
+        docker push ${REGISTRY}/${PREFIX}:-http${TAG}
+        docker build -f Dockerfile.grpc -t ${REGISTRY}/${PREFIX}-grpc:${TAG} .
+        docker push ${REGISTRY}/${PREFIX}-grpc:${TAG}

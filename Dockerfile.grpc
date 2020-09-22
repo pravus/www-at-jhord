@@ -1,0 +1,25 @@
+FROM alpine:3 as builder
+
+RUN apk --no-cache update \
+ && apk --no-cache upgrade \
+ && apk --no-cache add git go protoc \
+ && mkdir -p /usr/src/www-at-jhord-grpc
+
+COPY grpc-server/*.go /usr/src/www-at-jhord-grpc/
+COPY *.mod /usr/src/www-at-jhord-grpc/
+COPY *.sum /usr/src/www-at-jhord-grpc/
+COPY *.proto /usr/src/www-at-jhord-grpc/
+
+RUN cd /usr/src/www-at-jhord-grpc \
+ && go get -d \
+ && go get github.com/golang/protobuf/protoc-gen-go \
+ && mkdir -p registry \
+ && PATH=/root/go/bin:$PATH protoc --go_out=plugins=grpc:registry registry.proto \
+ && CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-extldflags "-static"' -o www-at-jhord-grpc
+
+
+FROM scratch
+
+COPY --from=builder /usr/src/www-at-jhord-grpc/www-at-jhord-grpc /
+
+ENTRYPOINT ["/www-at-jhord-grpc"]
