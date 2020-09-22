@@ -29,7 +29,7 @@ func Home() http.HandlerFunc {
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     logVisit(r)
     w.Header().Add("Content-Type", "text/html")
-    log.Printf("debug path=%s", r.URL.Path)
+    log.Printf("debug path=%s uri=%s x-forwarded-for=%s", r.URL.Path, r.RequestURI, r.Header.Get("X-Forwarded-For"))
     prefix := ""
     if r.URL.Path == "/" {
       prefix = "@jhord/"
