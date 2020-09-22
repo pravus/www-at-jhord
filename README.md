@@ -1,6 +1,6 @@
 # Description
 
-This project runs the `@jhord` sub-site of [www.carbon.cc](www.carbon.cc).
+This project builds the `@jhord` sub-site of [www.carbon.cc](www.carbon.cc).
 
 # Building Locally
 
