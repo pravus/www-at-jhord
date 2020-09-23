@@ -21,9 +21,8 @@
     <div>{{ .Resume.Contact.Phone }}</div>
     <div class="email"><a href="mailto:{{ .Resume.Contact.Email }}">{{ .Resume.Contact.Email }}</a></div>
     <div class="links">
-      <div>Projects and Source Code:</div>
 {{ range $index, $link := .Resume.Contact.Links }}
-      <div class="link"><a href="{{ $link.Href }}">{{ $link.Name }}</a></div>
+      <div class="link"><a href="{{ $link.Href }}">{{ if ne $link.Name "" }}{{ $link.Name }}{{ else }}{{ $link.Href }}{{ end }}</a></div>
 {{ end }}
     </div>
   </div>

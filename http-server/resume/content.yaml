@@ -1,7 +1,7 @@
 contact:
   first_name: Jason
   last_name:  Hord
-  title:      Linux Administrator / Programmer
+  title:      SRE / Software Engineer
   email:      jason.hord@gmail.com
   phone:      325-234-2010
   address:
@@ -11,9 +11,9 @@ contact:
     state:   CO
     zipcode: 80205
   links:
-  - name: GitHub Repositories
+  - name: 
     href: https://github.com/pravus
-  - name: GitLab Repositories
+  - name: 
     href: https://gitlab.com/jhord
 
 employments:
@@ -27,20 +27,28 @@ employments:
   - Go
   - C
   - Git
+  - Python
   - Docker
   - Kubernetes
   - MongoDB
   - Linux
   - DevOps
   experience:
-  - Automated platform build pipeline utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running customized Asterisk installations with support tooling for maintenance and diagnostics.
-  - Migrated multiple distributed MySQL/Tungsten database clusters to Amazon RDS to provide higher resilience and eliminate maintenance workloads.
+  - Created AWS ImageBuilder recipes and pipelines to build custom AMI images for media server deployment reducing new installation stand-up to less than 5 minutes.
+  - Migrated multiple distributed MySQL/Tungsten database clusters to Amazon RDS providing higher service resilience and eliminating maintenance workloads.
+  - Automated platform build workflow utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running custom Asterisk installations with support tooling for configuration and diagnostics.
+  - Rebuilt platform voicemail service using Python and the Asterisk ARI to achieve company goals of migrating all recordings and static media to Google Cloud Storage.
   - Refactored internal Caller ID Name (CNAM) service from PHP to Go reducing API server load by 50% and eliminating service timeouts.
-  - Developed Go microservices for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
-  - Debugged and refactored Go and NodeJS projects for a busy event pipeline to reduce CPU load, memory consumption, and on-the-wire JSON eliminating service bottlenecks and downtime.
-  - Updated call interfaces and logic to both MySQL and MongoDB databases for our platform API to support migrating from PHP 5.5 to 5.7 with zero downtime.
-  - Utilized SaltStack to automate deployment and maintenance tasks on a fleet of over 150 servers running Debian, Ubuntu, and CentOS Linux in cloud providers including Vultr, DigitalOcean, Google, and AWS.
-  - Provided day-to-day support to operations and business leadership in the form of reporting, tools, and technical documentation to help everyone on the team maintain positive, pro-active service for our clients.
+  - Developed  Go microservices for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
+  - Debugged and refactored Go and Node.js projects for a busy event pipeline and state aggregator to reduce CPU load, memory consumption, and on-the-wire JSON providing higher service uptime and better performance for client-facing consumers.
+  - Designed, built, and deployed a host service adapter in Go using NSQ and Docker to automate common Asterisk maintenance tasks significantly reducing engineering intervention to ensure service stability.
+  - Updated call interfaces and logic to MySQL and MongoDB databases for the platform API to support migrating from PHP 5.4 to 5.7 with zero downtime.
+  - Migrated active MongoDB cluster from version 2.4 to 3.6 to meet requirements for TLS/authentication and mitigate end-of-life support concerns.
+  - Analyzed crash dumps and error logs to develop patches for business critical applications with source contributions to Asterisk, ProxySQL, and AmiGo.
+  - Utilized SaltStack to automate deployment and configuration tasks on a fleet of over 150 servers running Debian, Ubuntu, and CentOS Linux in cloud providers including DigitalOcean, Linode, Rackspace, Vultr, Google, and AWS.
+  - Assisted developer efforts by creating services, API documentation, and scripts to facilitate dev and test environment build-outs utilizing Vagrant and GitLab/GitHub workflows.
+  - Responsible for creating and implementing Nagios/NRPE service checks and configuring ElasticSearch, Logstash, Kibana, and Grafana to provide systems monitoring, alerts, and activity dashboards enabling faster outage responsiveness in both operations and engineering.
+  - Provided day-to-day support to operations staff and business leadership in the form of reports, platform tools, and technical documentation empowering team members to make the best decisions for clients.
 
 - name:  Angelo State University
   title: Portal Integration Analyst
@@ -50,30 +58,31 @@ employments:
   keywords:
   - Perl
   - Linux
+  - Solaris
   - Banner
   - Luminis
   - Active Directory
   - Oracle
   - Enterprise
   experience:
-  - Programmed fully automated identity management system maintaining real-time account status for an active campus of over 6,000 students.
-  - Developed and deployed authenticated, secure web-services performing real-time updates via LDAP/S, SQL, or platform APIs.
-  - Designed and built customer service support tools to assist with identity and access issues such as lost or expired passwords and password resets.
+  - Programmed fully automated identity management system maintaining system account life-cycle for an active campus of over 6,000 students.
+  - Developed and deployed authenticated web services to automate Active Directory object changes via LDAP, Oracle database updates using packages, procedures, and triggers, and filesystem ACL/ACE modifications using platform APIs.
+  - Built customer service support tools to assist with identity and access issues such as lost or expired passwords and password resets.
   - Refactored Ellucian Banner Pro*C and PL/SQL programs for regulatory compliance and additional features as requested by functional staff to meet organizational goals.
   - Implemented single-sign-on to campus resources and federated services through Shibboleth, CAS, and custom built connectors in Perl allowing access to campus web resources through Ellucian Luminis.
-  - Provided expertise and PHP programming to facilitate the implementation of the LiveWhale CMS for the Angelo State University web site.
-  - Collaborated with team members to implement version control (SVN, Mercurial) for tracking and documenting modifications to Ellucian Banner, Luminis, and in-house applications.
+  - Provided expertise and PHP programming to facilitate the implementation of the LiveWhale CMS for managing the Angelo State University website.
+  - Collaborated with team members to implement version control (SVN, Mercurial) for tracking and documenting modifications to Ellucian Banner, Luminis, and in-house applications, jobs, and reports.
   - Created ETL workflow using Informatica Cloud and Salesforce.com enabling university retention and recruitment efforts.
-  - Administered Windows Server 2008 R2 domain including DNS, Certificates, GPOs, and IIS.
-  - Served as lead for technical projects including the migration of student email services to Gmail, implementation of on-campus Blackboard LMS services, and general infrastructure architecture and planning.
-  - Provided primary support and administration for campus Ellucian Luminis portal services.
+  - Administered both public DNS for angelo.edu and internal Windows Server 2008 R2 domain including DNS, Certificates, GPOs, and IIS.
+  - Served as lead contributor for technical projects including the migration of student email services to Gmail, implementation of on-campus Blackboard LMS services, and general infrastructure architecture and planning.
   - Coordinated and performed routine maintenance and administrative activities according to industry best practices.
+  - Responsible for the planning, installation, and configuration of campus Linux and Solaris servers in both on-premise and co-located facilities.
   - Managed regular student laboratory refresh cycles involving budgeting, procurement, and coordinating physical hardware replacement and disposal.
   - Documented and implemented departmental student technician employment policies.
 
 - name:  Self-Employed
   title: Owner
-  years: 1998 - 2015
+  years: 1998 - 2017
   city:  San Angelo
   state: TX
   keywords:
@@ -84,7 +93,7 @@ employments:
   - Wrote analysis and reporting software related to gas sample analysis for MTI, EZChrom, and Diablo BTU processing supporting multiple export formats including CSV, XML, Excel, and others as required by the reporting needs of the client.
   - Maintained a gas chromatography laboratory operating Agilent micro gas chromatographs analyzing natural gas samples for clients under the direction of JIS Measurement, Inc.
   - Built daily Excel-to-MySQL data migrator to enable USDA beef reporting for San Angelo Pack as contracted through WacTech, Inc.
-  - Developed a win32 platform utility to calculate orifice factors for gas pipeline measurement in the field.
+  - Developed a Win32 platform utility to calculate orifice factors for gas pipeline measurement in the field.
   - Programmed tooling for Charts, Inc. to convert chart integration data from an existing proprietary solution to formats suitable for newer processing software.
 
 - name:  SITEL Corporation
@@ -108,7 +117,8 @@ skills:
 - Go
 - C
 - Perl
-- JavaScript/NodeJS
+- JavaScript/Node.js
+- Python
 - bash/sh
 - Git
 - Linux (Arch, Debian, Ubuntu, RedHat, CentOS)

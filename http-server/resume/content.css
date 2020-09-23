@@ -55,14 +55,6 @@ section > .content {
   color: {{ .Palette.Hilite }};
 }
 
-#contact .content .links {
-  margin-top: 1em;
-}
-
-#contact .content .link a {
-  margin-left: 1em;
-}
-
 #work-experience .content .employer {
   margin: 1em 0em;
 }
