@@ -38,8 +38,11 @@ func Visits() http.HandlerFunc {
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     w.Header().Add("Content-Type", "text/html")
 
-    address := r.RemoteAddr
-    index   := strings.Index(address, ":")
+    address := r.Header.Get("X-Forwarded-For")
+    if address == "" {
+      address = r.RemoteAddr
+    }
+    index := strings.Index(address, ":")
     if index >= 0 {
       address = address[0:index]
     }
