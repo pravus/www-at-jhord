@@ -38,6 +38,7 @@ func Visits() http.HandlerFunc {
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     w.Header().Add("Content-Type", "text/html")
 
+    log.Printf("debug path=%s uri=%s x-forwarded-for=%s", r.URL.Path, r.RequestURI, r.Header.Get("X-Forwarded-For"))
     address := r.Header.Get("X-Forwarded-For")
     if address == "" {
       address = r.RemoteAddr
