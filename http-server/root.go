@@ -20,21 +20,12 @@ func RootRouter() func (chi.Router) {
   }
 }
 
-type RootVars struct {
-  Prefix string
-}
-
 func Home() http.HandlerFunc {
   content := template.Must(template.ParseFiles("root/content.html"))
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     logVisit(r)
     w.Header().Add("Content-Type", "text/html")
-    log.Printf("debug path=%s uri=%s x-forwarded-for=%s", r.URL.Path, r.RequestURI, r.Header.Get("X-Forwarded-For"))
-    prefix := ""
-    if r.URL.Path == "/" {
-      prefix = "@jhord/"
-    }
-    err := content.Execute(w, &RootVars{Prefix: prefix})
+    err := content.Execute(w, nil)
     if err != nil {
       log.Printf("template: error=%v", err)
     }

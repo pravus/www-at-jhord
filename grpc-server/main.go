@@ -11,6 +11,7 @@ import (
   "github.com/pravus/www-at-jhord/registry"
 )
 
+var GRPC_BIND  = ":5000"
 var MAX_VISITS = 10
 
 type Entry struct {
@@ -23,7 +24,7 @@ type VisitRegistry struct {
 }
 
 func main() {
-  bind := _env("GRPC_BIND", ":5000")
+  bind := _env("GRPC_BIND", GRPC_BIND)
   tcp, err := net.Listen("tcp", bind)
   if err != nil {
     log.Fatalf("grpc.listen error=%v", err)

@@ -7,7 +7,6 @@ import (
   "log"
   "net/http"
   "time"
-  "strings"
 
   "google.golang.org/grpc"
   "github.com/go-chi/chi"
@@ -37,18 +36,7 @@ func Visits() http.HandlerFunc {
   content := template.Must(template.ParseFiles("visits/content.html"))
   return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
     w.Header().Add("Content-Type", "text/html")
-
-    log.Printf("debug path=%s uri=%s x-forwarded-for=%s", r.URL.Path, r.RequestURI, r.Header.Get("X-Forwarded-For"))
-    address := r.Header.Get("X-Forwarded-For")
-    if address == "" {
-      address = r.RemoteAddr
-    }
-    index := strings.Index(address, ":")
-    if index >= 0 {
-      address = address[0:index]
-    }
-
-    err := content.Execute(w, getVisitsInfo(address, r.Header.Get("User-Agent")))
+    err := content.Execute(w, getVisitsInfo(r.Context().Value("RemoteAddr").(string), r.Header.Get("User-Agent")))
     if err != nil {
       log.Printf("template: error=%v", err)
       return
