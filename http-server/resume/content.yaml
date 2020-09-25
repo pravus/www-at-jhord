@@ -34,19 +34,19 @@ employments:
   - Linux
   - DevOps
   experience:
-  - Created AWS ImageBuilder recipes and pipelines to build custom AMI images for media server deployment reducing new installation stand-up to less than 5 minutes.
-  - Migrated multiple distributed MySQL/Tungsten database clusters to Amazon RDS providing higher service resilience and eliminating maintenance workloads.
-  - Automated platform build workflow utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running custom Asterisk installations with support tooling for configuration and diagnostics.
-  - Rebuilt platform voicemail service using Python and the Asterisk ARI to achieve company goals of migrating all recordings and static media to Google Cloud Storage.
   - Refactored internal Caller ID Name (CNAM) service from PHP to Go reducing API server load by 50% and eliminating service timeouts.
-  - Developed  Go microservices for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
   - Debugged and refactored Go and Node.js projects for a busy event pipeline and state aggregator to reduce CPU load, memory consumption, and on-the-wire JSON providing higher service uptime and better performance for client-facing consumers.
   - Designed, built, and deployed a host service adapter in Go using NSQ and Docker to automate common Asterisk maintenance tasks significantly reducing engineering intervention to ensure service stability.
+  - Developed Go microservices for production Kubernetes clusters including deployments, services, configmaps, and secrets to coordinate ingress networking, pod management, and safe credential storage.
+  - Rebuilt platform voicemail service using Python and the Asterisk ARI to achieve company goals of migrating all recordings and static media to Google Cloud Storage.
   - Updated call interfaces and logic to MySQL and MongoDB databases for the platform API to support migrating from PHP 5.4 to 5.7 with zero downtime.
-  - Migrated active MongoDB cluster from version 2.4 to 3.6 to meet requirements for TLS/authentication and mitigate end-of-life support concerns.
   - Analyzed crash dumps and error logs to develop patches for business critical applications with source contributions to Asterisk, ProxySQL, and AmiGo.
-  - Utilized SaltStack to automate deployment and configuration tasks on a fleet of over 150 servers running Debian, Ubuntu, and CentOS Linux in cloud providers including DigitalOcean, Linode, Rackspace, Vultr, Google, and AWS.
+  - Migrated active MongoDB cluster from version 2.4 to 3.6 to meet requirements for TLS/authentication and mitigate end-of-life support concerns.
   - Assisted developer efforts by creating services, API documentation, and scripts to facilitate dev and test environment build-outs utilizing Vagrant and GitLab/GitHub workflows.
+  - Utilized SaltStack to automate deployment and configuration tasks on a fleet of over 150 servers running Debian, Ubuntu, and CentOS Linux in cloud providers including DigitalOcean, Linode, Rackspace, Vultr, Google, and AWS.
+  - Automated platform build workflow utilizing Docker and GitHub to quickly deploy standardized, versioned, and stable images running custom Asterisk installations with support tooling for configuration and diagnostics.
+  - Migrated multiple distributed MySQL/Tungsten database clusters to Amazon RDS providing higher service resilience and eliminating maintenance workloads.
+  - Created AWS ImageBuilder recipes and pipelines to build custom AMI images for media server deployment reducing new installation stand-up to less than 5 minutes.
   - Responsible for creating and implementing Nagios/NRPE service checks and configuring ElasticSearch, Logstash, Kibana, and Grafana to provide systems monitoring, alerts, and activity dashboards enabling faster outage responsiveness in both operations and engineering.
   - Provided day-to-day support to operations staff and business leadership in the form of reports, platform tools, and technical documentation empowering team members to make the best decisions for clients.
 
